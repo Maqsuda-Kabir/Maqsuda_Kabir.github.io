@@ -1,3 +1,9 @@
+/*
+File Name: stylevl.html
+Date: 9/23/2020
+Programmer: Maqsuda Kabir
+*/
+
 html {
     height: 100%;
 }
@@ -138,7 +144,7 @@ footer img {
     text-align: center;
 }
 
-
+/* Hamburger Menu -  Mobile */
 /* Wrapper*/
 #hamnav {
     width: 100%;
