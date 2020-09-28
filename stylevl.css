@@ -1,6 +1,7 @@
-/*
-File Name: stylevl.html
-Date: 9/23/2020
+
+  /*
+File Name: style.html
+Date: 9/27/2020
 Programmer: Maqsuda Kabir
 */
 
@@ -10,7 +11,7 @@ html {
 
 body {
     background-color: #2F3035;
-    background-image: url(images/bunrieusoup.jpg);
+    background-image: url(images/soupegg.jpeg);
     background-size: cover;
     background-repeat: repeat;
     text-align: center; 
@@ -31,10 +32,7 @@ header {
 nav {
     background-color: rgba(0, 0, 0, 0.338);
     text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    
-    
+    padding-top: 10px;  
 }
 
 main {
@@ -60,8 +58,8 @@ footer img {
 }
 
 h1 {
-    height: 50px;
-    font-size: 40px;
+    height: 80px;
+    font-size: 60px;
     color: white;
     font-family: cursive;
     background-color: rgba(20, 19, 19, 0.473);
@@ -107,7 +105,7 @@ nav a {
     text-decoration: none;
     font-size: 17px;
     padding-left: 105px;
-    padding-right: 35px;
+    padding-right: 120px;
     
 }
 
@@ -182,6 +180,4 @@ footer img {
     /* Toggle Show/Hide Menu */
     #hamitems { display: none; }
     #hamnav input:checked ~ #hamitems { display: block; }
-  }
-  
-  
+  }  
