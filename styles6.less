@@ -1,0 +1,231 @@
+
+/*
+File Name: styles6.less
+Date: 02/18/19
+Programmer: Maqsuda Kabir
+*/
+
+/* reset browser styles */
+* {
+  box-sizing: border-box; 
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+ aside, footer, header, menu, nav {
+	display: block;
+}
+
+/* INSERT LESS VARIABLES HERE */
+/* colors */
+
+@color1: #CDD574;
+@color2: #EA6052;
+@color3: #1D828D;   
+@color4: #E777A2;    
+@color5: #4B458E;    
+@bg1: #CDD574;
+@bg2: #EA6052;
+@bg3: #FFFFFF;
+@lightcolor: #FFFFFF;
+@darkcolor:  #000000;
+
+/* sizes */
+
+@font: "Open Sans";
+
+body {
+	background-color: @bg1;
+    font-family: "Open Sans";
+    font-size: 2em;
+    
+}
+
+
+header h1 {
+	font-size: 3em;	
+	color: @color1;
+	font-weight: bold;
+	padding-top: 30px;
+	clear: both;
+	padding-left: 10px;
+    text-align: center;
+}
+
+header h2{
+    font-weight: bold;
+    
+}
+
+header3{
+    
+    font-weight: bold;
+    
+    
+}
+
+nav {
+	background-color:#4B458E;
+	border: 1px #000000;	
+	border-left: none;
+	border-right: none;
+}
+nav ul {
+	padding: 0;
+	margin: 0;	
+}
+
+ul{
+    list-style-type: none; 
+}
+
+nav li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;	
+}
+nav a {
+	float: left;
+	font-size: .8em;	
+	color: white;
+	font-weight: normal;
+	text-decoration: none;
+	padding: 10px;
+	border-right: 1px @lightcolor;
+}
+	
+nav li:last-of-type a {
+	border-right: none;	
+}
+nav a:hover {
+	background-color:@color5;
+}
+aside h2 {
+	font-size: 1.3em;
+	margin-top: 10px;	
+}
+
+aside p, aside li {
+	font-size: .75em;
+	margin-top: 10px;	
+}
+.main h2 {
+	font-size: 2em;
+	margin-top: 10px;	
+}
+.main h3 {
+	font-size: 1.5em;
+	margin-top: 20px;	
+}
+.main p {
+	margin-bottom: 15px;	
+}
+   
+
+.sidebar {
+  float: right;
+  width: 20%;
+  margin: 10px;
+  padding: 0 10px 0 20px;
+}
+
+
+.main {
+  float: right;
+  width: 75%;
+  padding: 0 20px;
+  border-left: #000000;
+  border-right: #000000;
+}
+
+footer {
+  background-color: @color5;
+  color: @lightcolor;
+  padding: 1em;
+    a {
+        
+    }
+    
+}
+nav ul, header h1, footer p {
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+img {
+  max-width: 100%;
+}
+img.half {
+    max-width: 50%;
+}
+img.left {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+img.right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+@import 'palette.less';
+@import 'fonts.less';
+@import 'mixinlibrary.less';
+
+// MOBILE STYLESHEET
+  body {
+        background-color: @lightcolor1;
+        color: @darkcolor;
+        font-family: @normalFont;
+        font-size: 2em;      
+    }
+
+     header {
+         h1 {
+    font-size: 3em;	
+	color: @color1;
+	font-weight: bold;
+	padding-top: 30px;
+	clear: both;
+	padding-left: 10px;
+    text-align: center;
+         }
+         h2{
+             padding:
+             
+ }
+        
+    main {
+          p{
+            
+        }
+        h2{
+          padding: 
+            
+        }
+        h3{
+            
+        }
+        p{
+            
+        }
+  }
+    
+    footer {
+        a{
+            
+        }
+        background-color: @color1;
+        color: @lightcolor;
+        padding: 1em;
+	    margin-top: 15px;
+	    font-size: .8em;	
+	    
+         }
+}
