@@ -1,6 +1,5 @@
-
-  /*
-File Name: style.html
+/*
+File Name: style.css
 Date: 9/27/2020
 Programmer: Maqsuda Kabir
 */
@@ -12,6 +11,7 @@ html {
 body {
     background-color: #2F3035;
     background-image: url(images/soupegg.jpeg);
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: repeat;
     text-align: center; 
@@ -20,7 +20,7 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1024px;
+    width: 100%;
 }
 
 header {
@@ -32,15 +32,17 @@ header {
 nav {
     background-color: rgba(0, 0, 0, 0.338);
     text-align: center;
-    padding-top: 10px;  
+    padding-top: 80px;  
+    color: white;
+    font-size: 2.6em;
 }
 
 main {
-    height: 400px;
+   
     text-align: center;
     padding-top: 80px;
-    padding-left: 240px;
-    padding-right: 240px;
+    padding-left: 0;
+    padding-right: 0;
     
 }
 
@@ -75,13 +77,13 @@ h2 {
 h3 {
     font-weight: bold;
     color: white;
-    font-family: cursive;
+    font-family:Arial, Helvetica, sans-serif;
     background-color: rgba(39, 37, 37, 0.527);
 }
 
 h4 {
     font-weight: bold;
-    color: lime;
+    color: white;
     text-align: center;
     font-size: larger;
 }
@@ -140,10 +142,9 @@ footer img {
     position: sticky;
     top: 0;
   }
-  
-  /* Hide Hamburger */
-  #hamnav label, #hamburger { display: none; }
-  
+
+  #hamburger{ display: none;}
+      
   /* Horizontal Menu Items */
   #hamitems { display: flex; }
   #hamitems a {
@@ -156,28 +157,43 @@ footer img {
   #hamitems a:hover {
     background: #401408;
   }
-  
+
   /* [ON SMALL SCREENS] */
-  @media screen and (max-width: 768px){
+  @media screen and (min-width: 768px){
     /* Show Hamburger Icon */
     #hamnav label { 
-      display: inline-block; 
+      display: inline; 
       color: white;
       background: #a02620;
       font-style: normal;
-      font-size: 3em;
+      font-size: 1.5em;
       padding: 10px;
     }
+}
   
     /* Break down menu items into vertical */
     #hamitems a {
       box-sizing: border-box;
       display: block;
       width: 100%;
-      
     }
   
     /* Toggle Show/Hide Menu */
     #hamitems { display: none; }
     #hamnav input:checked ~ #hamitems { display: block; }
-  }  
+  }
+
+
+  @media screen and (min-width: 1200px){
+      .container (width: 1024px;)
+      main (padding-left: 240px; padding-right: 240px;)
+      #hamnav label, #hamburger { display: none; }
+  }
+
+    
+
+
+
+
+
+
