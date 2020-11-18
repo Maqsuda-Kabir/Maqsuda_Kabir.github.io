@@ -1,0 +1,88 @@
+
+/*
+File Name: grid.css
+Date: 03/07/19
+Programmer: Maqsuda Kabir
+*/
+
+/* Adapted from: http://www.responsivegridsystem.com (media queries changed to mobile first) */
+
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before, .group:after { 
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.span_2_of_2, .span_1_of_2 {
+        width: 100%;
+}
+
+/* TABLET STYLES - GRID OF TWO */
+
+@media only screen and (min-width: 600px) {
+
+.span_2_of_2 {
+	width: 100%;
+}
+
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+.col {
+        margin: 1% 0 1% 1%;
+}
+
+.col:nth-child(3) { 
+        margin-left: 0; 
+}
+
+}
+
+/* DESKTOP STYLES - GRID OF THREE */
+
+@media only screen and (min-width: 1025px) {
+
+.col {
+    margin: 1% 0 1% 1.6%;
+}
+
+.span_3_of_3 { 
+    width: 100%; 
+}
+
+.span_2_of_3 { 
+    width: 66.13%; 
+}
+
+.span_1_of_3 { 
+    width: 32.26%; 
+}
+
+.col:nth-child(3) { 
+    margin-left: 1%; 
+}
+
+}
