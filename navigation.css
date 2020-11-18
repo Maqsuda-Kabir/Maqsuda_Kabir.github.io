@@ -1,0 +1,157 @@
+/*
+File Name: navigation.css
+Date: 03/07/19
+Programmer: Maqsuda Kabir
+*/
+
+/* Based on http://kmturley.blogspot.com/2014/06/responsive-mobile-dropdown-navigation.html */
+/* Modified for mobile-first design */
+
+/* Set up menu */
+
+/* remove bullet in front of list items in menu */
+ 
+.header ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+    overflow: hidden;
+}
+
+/* space between lines */
+
+.header li {
+    padding: 10px 0;
+}
+ 
+/* remove underline in links. */
+
+.header li a {
+    text-decoration: none;
+    color: #333;
+}
+ 
+.header li a:hover {
+    background-color: #F4F4F4;
+}
+
+/* space around each of the menu items */
+  
+.header li a {
+    padding: 10px 30px;
+}
+
+/* clear float on line below */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+}
+
+/* menu icon for responsive hamburger menu */
+
+.header .menu-icon { /* location of hamburger icon */
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ 
+.header .menu-icon .navicon { /* center line of hamburger icon */
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+ 
+.header .menu-icon .navicon:before, /* top and bottom lines of hamburger icon */
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+ 
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+ 
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* respond to click on hamburger menu icon */
+
+.header .menu-btn { /* hide checkbox */
+    display: none;
+}
+ 
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+ 
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+/* animations */
+ 
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+ 
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+ 
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/*  TABLET AND DESKTOP: CREATE HORIZONTAL NAVIGATION BAR AT 600 PX OR HIGHER */
+@media only screen and (min-width: 600px) {
+
+/* Note: We float the entire menu to the right, so it is right-aligned. Then we float each list item to the left,
+so it sits to next to the next item. We have to clear the float in the intro section so the text won't wrap 
+around the menu. You may find it helpful to change 'left' to 'right' to see what happens. */
+
+.header .menu {
+    float: left;
+    margin: 0 0 10px 0;
+    max-height: none;
+}
+
+.header ul {
+    overflow: visible;
+    margin-bottom: 20px;
+}
+  
+.header li {
+    float: left;
+}
+    
+.header li a {
+    padding: 10px 10px;
+}
+  
+#intro {
+    clear: left;
+}
+  
+/* hide the checkbox and label for it */
+  
+.header .menu-icon, .menu-btn {
+    display: none;
+}
+
+}
