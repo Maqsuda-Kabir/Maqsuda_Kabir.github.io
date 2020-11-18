@@ -1,0 +1,182 @@
+/*
+File Name: style-backup2.less
+Date: 03/07/19
+Programmer: Maqsuda Kabir
+*/
+
+/* MOBILE STYLES */
+
+@import "mixins.less";
+
+/* colors */
+
+@base_color: #FFF8DC;
+@m_bg_color: @base_color;
+@t_bg_color: spin(@m_bg_color, 80);
+@d_bg_color: spin(@t_bg_color, 80);
+@footer_color: #9F00C5;
+@references_hover_color: #E8E8E8;
+@references_bg_color: #0000FF;
+
+/* sizes */
+
+@m_font_size: 16px;
+@t_font_size: @m_font_size * .9375;
+@d_font_size: @m_font_size * .875;
+@h1_font_size: 2em;
+@h2_font_size: @h1_font_size * .7;
+@h3_font_size: @h1_font_size * .55;
+@summary_font_size: .6em;
+@summary_first_font_size: 1.5em;
+@designer_font_size: .75em;
+@contact_font_size: 0.9em;
+
+/* margins */
+
+@p_h_margin: 1em 1em 1em 0;
+@m_body_margin: 0 1em;
+@t_body_margin: 0 3em;
+@d_body_margin: 0 4em;
+@ol_li_left_margin: 0;
+
+/* SELECTORS */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5em;
+    #project_mixins >
+    .common_properties(@m_bg_color, @m_font_size, @m_body_margin);
+}
+
+p {
+    margin: @p_h_margin;
+}
+
+h1 {
+    margin: @p_h_margin;
+    font-weight: bold;
+    #project_mixins > .size(@h1_font_size);
+	text-shadow: 2px 2px #989898;
+	margin-bottom: 0;
+	margin-top: 0;
+	line-height: 2em;
+}
+
+h2 {
+    margin: @p_h_margin;
+    font-weight: bold;
+    #project_mixins > .size(@h2_font_size);
+}
+
+h3 {
+    margin: @p_h_margin;
+    font-weight: bold;
+    #project_mixins > .size(@h3_font_size);
+	font-style: italic;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 25px;
+    li {
+        margin-left: @ol_li_left_margin; 
+    }
+    
+li {
+    line-height: 1.5em;
+
+}
+
+footer {
+    margin-bottom: 10px;
+    font-style: italic;
+    #project_mixins > .color(@footer_color);
+    text-align: center;
+}
+
+#references {
+    ul {
+       list-style-type: disc;
+       list-style-position: inside;
+}
+    a {
+        &:link {
+           text-decoration: none; 
+        }
+        &:visited {
+            text-decoration: none; 
+        }
+        &:hover {
+            text-decoration: underline;
+	       #project_mixins > .color(@references_hover_color);
+	         background-color: @references_bg_color;
+        }
+    }
+}
+
+#summary {
+    #project_mixins > .size(@summary_font_size);
+    font-style: italic;
+    line-height: 115%;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    &:first-letter {
+          #project_mixins > .size(@summary_first_font_size);
+          font-weight: bold;
+    }
+}
+
+#designer {
+    #project_mixins > .size(@designer_font_size);
+	line-height: 1.1em;
+	text-align: left;
+}
+
+#contact {
+    letter-spacing: 3px;
+    #project_mixins > .size(@contact_font_size);
+}
+
+/* TABLET STYLES */
+
+@media only screen and (min-width: 600px) {
+
+body {
+    #project_mixins >
+    .common_properties(@t_bg_color, @t_font_size, @t_body_margin);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: .8em;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+ol {
+    margin-bottom: 15px;
+}
+    
+ul {
+    margin-bottom: 1em;
+}
+    
+#funfacts {
+    ol {
+    margin-left: 18px;
+    } 
+  }
+}
+
+/* DESKTOP STYLES */
+    
+    @media only screen and (min-width: 1025px) {
+
+    body {
+    #project_mixins >
+    .common_properties(@d_bg_color, @d_font_size, @d_body_margin);
+    }
+}
+}
